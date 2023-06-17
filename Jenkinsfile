@@ -22,7 +22,7 @@ pipeline {
 			
 			stage('Run server') {
 				steps {
-					sh "docker run -d -p 9295:8081 nginx:${BUILD_NUMBER}"
+					sh "docker run -d -p 9295:8081 nginx"
 				}
 			}
 		}
