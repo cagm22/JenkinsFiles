@@ -1,9 +1,9 @@
-# A simple web app served by httpd
 FROM httpd:2.4
 
-LABEL AUTHOR=user@example.com
+LABEL AUTHOR=cagm22
 LABEL VERSION=0.1
+
+COPY ./public-html/ /usr/local/apache2/htdocs/
 
 WORKDIR /us/local/apache2
 
-COPY hello_world.html /usr/local/apache2/htdocs/
