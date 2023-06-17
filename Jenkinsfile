@@ -11,7 +11,7 @@ pipeline {
 					sh "echo 333"
 					sh "echo 444"
 					sh "echo 555"
-					sh "docker build -t nginx blabla 'https://github.com/cagm22/Jenkinsfile_Examples.git'"
+					sh "docker build -t nginx '.'"
 					sh "echo 666"
 
 				}
