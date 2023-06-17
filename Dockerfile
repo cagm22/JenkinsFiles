@@ -11,9 +11,5 @@ RUN set -x \
     && groupadd --system --gid 101 nginx \
     && useradd --system --gid nginx --no-create-home --home /nonexistent --comment "nginx user" --shell /bin/false --uid 101 nginx \
     && apt-get install --no-install-recommends --no-install-suggests -y gnupg1 ca-certificates \
-
-EXPOSE 80
-
-STOPSIGNAL SIGQUIT
-
+    
 CMD ["nginx", "-g", "daemon off;"]
