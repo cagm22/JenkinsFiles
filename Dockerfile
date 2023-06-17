@@ -1,8 +1,10 @@
-FROM ubuntu:latest
-RUN apt-get -y update;
-    apt-get -y upgrade;
-    apt-get -y install apt-utils \ 
-    vim \ 
-    htop;
-RUN apt-get -y install dstat
-CMD ["bash"]
+# A simple web app served by httpd
+FROM httpd:2.4
+
+LABEL AUTHOR=user@example.com
+LABEL VERSION=0.1
+
+# COPY mypage. html /usr /local/apache2/htdocs /mypage.html
+# WORKDIR /us/local/apache2
+
+// COPY mypage. html htdocs/mypage. html
