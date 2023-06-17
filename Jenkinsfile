@@ -14,7 +14,7 @@ pipeline {
 					sh "echo 333"
 					sh "echo 444"
 					sh "echo 555"
-					sh "docker build -t nginx '.'"
+					sh "docker build -t apache '.'"
 					sh "echo 666"
 
 				}
@@ -22,7 +22,7 @@ pipeline {
 			
 			stage('Run server') {
 				steps {
-					sh "docker run -d -p 9295:8081 nginx"
+					sh "docker run -dit --name apache-app -p 8080:8081 apache"
 				}
 			}
 		}
