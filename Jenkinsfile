@@ -15,9 +15,9 @@ pipeline {
 		stage('Run server') {
 			steps {
 				sh "docker run -dit -p 8081:81 apache_1"
-				sh "docker run -dit -p 8081:81 apache_2"
-				sh "docker run -dit -p 8081:81 apache_3"
-				sh "docker run -dit -p 8081:81 apache_4"
+				sh "docker run -dit -p 8082:82 apache_2"
+				sh "docker run -dit -p 8083:83 apache_3"
+				sh "docker run -dit -p 8084:84 apache_4"
 			}
 		}
 	}
