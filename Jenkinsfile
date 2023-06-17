@@ -22,7 +22,7 @@ pipeline {
 			
 			stage('Run server') {
 				steps {
-					sh "docker run -dit --name apache-app -p 8080:8081 apache"
+					sh "docker run -dit --name apache-app -p 8081:81 apache"
 				}
 			}
 		}
