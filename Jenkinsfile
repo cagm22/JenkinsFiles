@@ -6,7 +6,7 @@ pipeline {
 					//sh "docker pull nginx:latest"
 					sh "echo pull"
 					sh "echo 111"
-					sh "git clone --recursive https://github.com/cagm22/Jenkinsfile_Examples.git"
+					sh "git clone --recursive --force https://github.com/cagm22/Jenkinsfile_Examples.git"
 					sh "echo 222"
 					sh "echo 333"
 					sh "echo 444"
